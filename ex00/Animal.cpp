@@ -1,20 +1,32 @@
 #include "Animal.hpp"
 
+Animal::Animal() : _type("Animal")
+{
+	cout << "Animal constructor" << endl;
+}
 
-Animal::Animal(string type) : _type(type) {}
 
+Animal::~Animal()
+{
+	cout << "Animal destructor" << endl;
+}
 
-//Animal& Animal::operator=(const Animal& src)
-//{
-//	if (this == &src)
-//		return *this;
-//	else
-//	{
-//		_type = src.getType();
-//		return *this;
-//	}
-//
-//}
+Animal::Animal(const Animal &src)
+{
+	*this = src;
+}
+
+Animal& Animal::operator=(const Animal& src)
+{
+	if (this == &src)
+		return *this;
+	else
+	{
+		_type = src.getType();
+		return *this;
+	}
+
+}
 
 string Animal::getType() const
 {

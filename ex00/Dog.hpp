@@ -10,13 +10,11 @@ class Dog : public Animal
 {
 public:
 	Dog();
-	Dog(string type);
 	~Dog();
-	Dog& operator=(const Dog& Dog);
+	Dog& operator=(const Dog& src);
 	Dog(const Dog& dog);
 	virtual void makeSound() const;
 	virtual string getType() const;
-
 };
 
 

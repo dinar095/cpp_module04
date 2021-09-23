@@ -11,11 +11,10 @@ using std::string;
 class Animal
 {
 public:
-	Animal(void) {};
-	Animal(string type);
-	~Animal() {};
-//	Animal& operator=(const Animal &src);
-//	Animal(const Animal& src);
+	Animal(void);
+	~Animal();
+	Animal& operator=(const Animal &src);
+	Animal(const Animal& src);
 	virtual void makeSound() const;
 	virtual string getType() const;
 
