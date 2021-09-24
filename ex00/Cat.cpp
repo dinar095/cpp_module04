@@ -5,6 +5,8 @@ Cat::Cat()
 	_type = "Cat";
 }
 
+Cat::~Cat() {}
+
 Cat::Cat(const Cat &src)
 {
 	*this = src;

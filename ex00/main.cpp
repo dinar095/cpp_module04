@@ -29,5 +29,4 @@ int main()
 	wrCat->makeSound();
 	cout << "\n********WrongAnimal********" << endl;
 	meta2->makeSound();
-
 }
