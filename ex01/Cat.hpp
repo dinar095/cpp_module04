@@ -3,20 +3,20 @@
 #pragma once
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 
 class Cat : public Animal
 {
 public:
 	Cat(void);
-	~Cat() {};
+	virtual ~Cat();
 	Cat& operator=(const Cat& src);
 	Cat(const Cat& src);
 	virtual void makeSound() const;
 	virtual string getType() const;
-
-//private:
-
+private:
+	Brain *_brain;
 };
 
 
