@@ -1,7 +1,8 @@
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#define RAND_MAX 5
+#include "Brain.hpp"
+
 
 int main()
 {
@@ -9,8 +10,20 @@ int main()
 	const Animal* i = new Cat();
 	delete j;//should not create a leak
 	delete i;
-	int tt;
-	srand(std::time(0));
-	tt = std::rand() % 20;
-	cout << tt << endl;
+
+	int sizeStado = 10;
+	Animal *stado[sizeStado];
+
+	for (int i = 0; i < sizeStado; i++)
+	{
+		if (i % 2)
+			stado[i] = new Cat();
+		else
+			stado[i] = new Dog();
+	}
+
+	for (int i = 0; i < sizeStado; i++)
+		delete stado[i];
+
+
 }

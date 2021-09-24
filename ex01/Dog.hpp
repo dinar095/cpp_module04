@@ -16,6 +16,7 @@ public:
 	Dog(const Dog& dog);
 	virtual void makeSound() const;
 	virtual string getType() const;
+	Brain *getBrain();
 
 private:
 	Brain *_brain;

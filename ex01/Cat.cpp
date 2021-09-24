@@ -42,3 +42,10 @@ std::ostream& operator<<(std::ostream& out, Cat const& src)
 	out << src.getType();
 	return out;
 }
+
+Brain* Cat::getBrain()
+{
+	if (_brain)
+		return _brain;
+	return 0;
+}

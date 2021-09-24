@@ -3,6 +3,7 @@
 #pragma once
 #include <iostream>
 
+
 using std::cout;
 using std::endl;
 using std::string;
@@ -14,9 +15,12 @@ public:
 	~Brain();
 	Brain& operator=(const Brain& src);
 	Brain(const Brain& src);
-
+	string	getRandomIdea();
+	void	printIdeas() const;
+	string* getIdeas();
 protected:
-	string _ideas[100];
+	static const int ideas_size = 100;
+	string _ideas[ideas_size];
 };
 
 

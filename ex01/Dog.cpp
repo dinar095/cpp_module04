@@ -36,3 +36,10 @@ void Dog::makeSound() const
 {
 	cout << _type << endl;
 }
+
+Brain* Dog::getBrain()
+{
+	if (_brain)
+		return _brain;
+	return 0;
+}

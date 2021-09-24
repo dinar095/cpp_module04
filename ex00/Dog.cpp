@@ -1,4 +1,6 @@
 #include "Dog.hpp"
+#include "../ex01/Dog.hpp"
+
 
 Dog::Dog()
 {
@@ -31,3 +33,4 @@ void Dog::makeSound() const
 {
 	cout << getType() << endl;
 }
+

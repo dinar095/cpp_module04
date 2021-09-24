@@ -1,4 +1,6 @@
 #include "Cat.hpp"
+#include "../ex01/Cat.hpp"
+
 
 Cat::Cat()
 {
