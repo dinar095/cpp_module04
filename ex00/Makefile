@@ -1,5 +1,5 @@
-NAME = fragtrap
-CLASS = FragTrap ClapTrap
+NAME = animal
+CLASS = Animal Cat Dog WrongAnimal WrongCat
 HEADER = $(patsubst %,%.hpp,$(CLASS))
 FUNCTIONS = main $(CLASS)
 

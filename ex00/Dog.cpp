@@ -2,14 +2,9 @@
 
 Dog::Dog()
 {
-	cout << "Dog constructor" << endl;
 	_type = "Dog";
 }
 
-Dog::~Dog()
-{
-	cout << "Dog destructor" << endl;
-}
 
 Dog& Dog::operator=(const Dog &src)
 {

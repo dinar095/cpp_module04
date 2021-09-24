@@ -1,15 +1,9 @@
 #include "Animal.hpp"
 
-Animal::Animal() : _type("Animal")
-{
-	cout << "Animal constructor" << endl;
-}
+Animal::Animal() : _type("Animal") {}
 
 
-Animal::~Animal()
-{
-	cout << "Animal destructor" << endl;
-}
+Animal::~Animal() {}
 
 Animal::Animal(const Animal &src)
 {

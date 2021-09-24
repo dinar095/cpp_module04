@@ -3,7 +3,11 @@
 Cat::Cat()
 {
 	_type = "Cat";
-	cout << "Cat constructor" << endl;
+}
+
+Cat::Cat(const Cat &src)
+{
+	*this = src;
 }
 
 Cat& Cat::operator=(const Cat& src)
@@ -15,11 +19,6 @@ Cat& Cat::operator=(const Cat& src)
 		_type = src.getType();
 		return *this;
 	}
-}
-
-Cat::~Cat()
-{
-	cout << "Cat destrctor" << endl;
 }
 
 string Cat::getType() const
