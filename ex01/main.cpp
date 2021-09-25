@@ -30,5 +30,4 @@ int main()
 
 	Animal *animal = mau;
 	delete animal;
-
 }

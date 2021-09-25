@@ -1,5 +1,5 @@
 NAME = animal
-CLASS = Animal Cat Dog WrongAnimal WrongCat
+CLASS = Animal Cat Dog Brain
 HEADER = $(patsubst %,%.hpp,$(CLASS))
 FUNCTIONS = main $(CLASS)
 
