@@ -11,19 +11,24 @@ int main()
 	delete j;//should not create a leak
 	delete i;
 
-	int sizeStado = 10;
-	Animal *stado[sizeStado];
+	int sizeStaya = 10;
+	Animal *staya[sizeStaya];
 
-	for (int i = 0; i < sizeStado; i++)
+	for (int i = 0; i < sizeStaya; i++)
 	{
 		if (i % 2)
-			stado[i] = new Cat();
+			staya[i] = new Cat();
 		else
-			stado[i] = new Dog();
+			staya[i] = new Dog();
 	}
+	Cat *mau = new Cat(*dynamic_cast<Cat *>(staya[1]));
+//	dynamic_cast<Cat *>(staya[1])->getBrain()->printIdeas();
+//	cout << "=====================" << endl;
+	for (int i = 0; i < sizeStaya; i++)
+		delete staya[i];
+	mau->getBrain()->printIdeas();
 
-	for (int i = 0; i < sizeStado; i++)
-		delete stado[i];
-
+	Animal *animal = mau;
+	delete animal;
 
 }

@@ -3,7 +3,6 @@
 #pragma once
 #include <iostream>
 
-
 using std::cout;
 using std::endl;
 using std::string;
@@ -11,12 +10,12 @@ using std::string;
 class Animal
 {
 public:
-	Animal(void);
 	virtual ~Animal();
 	Animal& operator=(const Animal &src);
 	Animal(const Animal& src);
-	virtual void makeSound() const;
+	virtual void makeSound() const = 0;
 	virtual string getType() const;
+	Animal(void);
 
 protected:
 	string _type;

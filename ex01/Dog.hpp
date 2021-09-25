@@ -12,8 +12,8 @@ class Dog : public Animal
 public:
 	Dog(void);
 	virtual ~Dog();
-	Dog& operator=(const Dog& src);
-	Dog(const Dog& dog);
+	Dog& operator=(Dog& src);
+	Dog(Dog& dog);
 	virtual void makeSound() const;
 	virtual string getType() const;
 	Brain *getBrain();

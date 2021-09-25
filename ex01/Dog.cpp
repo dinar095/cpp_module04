@@ -13,16 +13,20 @@ Dog::~Dog()
 	cout << "Dog destructor" << endl;
 }
 
-Dog& Dog::operator=(const Dog &src)
+Dog& Dog::operator=(Dog &src)
 {
 	if (this == &src)
 		return *this;
 	else
+	{
 		_type = src.getType();
+		if (src.getBrain())
+			_brain = new Brain(*src.getBrain());
+	}
 	return *this;
 }
 
-Dog::Dog(const Dog &dog)
+Dog::Dog(Dog &dog)
 {
 	*this = dog;
 }
@@ -41,5 +45,5 @@ Brain* Dog::getBrain()
 {
 	if (_brain)
 		return _brain;
-	return 0;
+	return NULL;
 }

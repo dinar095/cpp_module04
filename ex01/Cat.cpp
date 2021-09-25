@@ -13,17 +13,22 @@ Cat::~Cat()
 	cout << "Cat destructor" << endl;
 }
 
-Cat::Cat(const Cat &src)
+Cat::Cat(Cat &src)
 {
 	*this = src;
 }
 
-Cat& Cat::operator=(const Cat& src)
+Cat& Cat::operator=(Cat& src)
 {
+
 	if (this == &src)
 		return *this;
 	else
+	{
 		_type = src.getType();
+		if (src.getBrain())
+			_brain = new Brain(*src.getBrain());
+	}
 	return *this;
 }
 
@@ -47,5 +52,5 @@ Brain* Cat::getBrain()
 {
 	if (_brain)
 		return _brain;
-	return 0;
+	return NULL;
 }
