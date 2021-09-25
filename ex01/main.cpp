@@ -2,6 +2,7 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "Brain.hpp"
+#define COUNT 10
 
 
 int main()
@@ -11,10 +12,9 @@ int main()
 	delete j;//should not create a leak
 	delete i;
 
-	int sizeStaya = 10;
-	Animal *staya[sizeStaya];
+	Animal *staya[COUNT];
 
-	for (int i = 0; i < sizeStaya; i++)
+	for (int i = 0; i < COUNT; i++)
 	{
 		if (i % 2)
 			staya[i] = new Cat();
@@ -24,7 +24,7 @@ int main()
 	Cat *mau = new Cat(*dynamic_cast<Cat *>(staya[1]));
 //	dynamic_cast<Cat *>(staya[1])->getBrain()->printIdeas();
 //	cout << "=====================" << endl;
-	for (int i = 0; i < sizeStaya; i++)
+	for (int i = 0; i < COUNT; i++)
 		delete staya[i];
 	mau->getBrain()->printIdeas();
 
