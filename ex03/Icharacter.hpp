@@ -1,6 +1,8 @@
 #ifndef CPP_MODULE04_ICHARACTER_HPP
 #define CPP_MODULE04_ICHARACTER_HPP
+#pragma once
 
+class AMateria;
 
 class ICharacter
 {

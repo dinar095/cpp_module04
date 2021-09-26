@@ -1,0 +1,11 @@
+#ifndef CPP_MODULE04_MATERIASOURCE_HPP
+#define CPP_MODULE04_MATERIASOURCE_HPP
+
+
+class MateriaSource
+{
+
+};
+
+
+#endif //CPP_MODULE04_MATERIASOURCE_HPP

@@ -3,6 +3,7 @@
 #pragma once
 
 #include <iostream>
+#include "Icharacter.hpp"
 
 using std::cout;
 using std::endl;

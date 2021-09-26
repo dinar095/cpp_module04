@@ -7,6 +7,7 @@
 
 class Ice : public  AMateria
 {
+public:
 	Ice();
 	Ice(string const &type);
 	~Ice() {};
