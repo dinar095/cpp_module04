@@ -16,6 +16,8 @@ MateriaSource::~MateriaSource()
 
 void MateriaSource::learnMateria(AMateria *src)
 {
+	if (!src)
+		return;
 	for (int i = 0; i < 4; i++)
 	{
 		if (!bag[i])

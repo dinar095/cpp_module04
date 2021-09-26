@@ -1,5 +1,5 @@
 NAME = animal
-CLASS =
+CLASS = MateriaSource IMateriaSource Icharacter Ice Cure Character Amateria
 HEADER = $(patsubst %,%.hpp,$(CLASS))
 FUNCTIONS = main $(CLASS)
 
