@@ -1,6 +1,6 @@
 #ifndef CPP_MODULE04_AMATERIA_HPP
 #define CPP_MODULE04_AMATERIA_HPP
-#pragma once
+
 
 #include <iostream>
 #include "Icharacter.hpp"
@@ -16,7 +16,7 @@ protected:
 
 public:
 	AMateria(std::string const & type);
-	AMateria() {};
+	AMateria();
 	virtual ~AMateria() {};
 	std::string const & getType() const; //Returns the materia type
 	virtual AMateria* clone() const = 0;

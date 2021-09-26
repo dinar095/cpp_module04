@@ -1,9 +1,15 @@
 #include "Ice.hpp"
 
-Ice::Ice() : AMateria("ice") {}
+Ice::Ice()
+{
+	type = "ice";
+}
 
 
-Ice::Ice(string const &type) : AMateria(type) {}
+Ice::Ice(string const &type)
+{
+	this->type = type;
+}
 
 AMateria* Ice::clone() const
 {

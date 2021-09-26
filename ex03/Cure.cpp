@@ -1,8 +1,14 @@
 #include "Cure.hpp"
 
-Cure::Cure() : AMateria("Cure") {}
+Cure::Cure()
+{
+	type = "cure";
+}
 
-Cure::Cure(string const &type) : AMateria(type) {}
+Cure::Cure(string const &type)
+{
+	this->type = type;
+}
 
 Cure& Cure::operator=(const Cure &src)
 {
@@ -10,6 +16,7 @@ Cure& Cure::operator=(const Cure &src)
 		return *this;
 	else
 		type = src.getType();
+	return *this;
 }
 Cure::Cure(const Cure &src)
 {
