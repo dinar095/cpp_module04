@@ -1,5 +1,5 @@
 NAME = animal
-CLASS = MateriaSource IMateriaSource Icharacter Ice Cure Character Amateria
+CLASS = MateriaSource Ice Cure Character Amateria
 HEADER = $(patsubst %,%.hpp,$(CLASS))
 FUNCTIONS = main $(CLASS)
 
@@ -16,7 +16,7 @@ all: $(NAME)
 obj_f: $(SRC)
 	$(CC) $(CFLAGS) -c $(SRC)
 
-$(NAME): $(OBJ) $(HEADER)
+$(NAME): $(OBJ) $(HEADER) IMateriaSource.hpp Icharacter.hpp
 	$(CC) $(SRC) -std=c++98 -o $(NAME)
 	@echo "\033[32;1m\n Binary \"$(NAME)\" created\n\033[0m"
 
